@@ -1,0 +1,64 @@
+/* Import Font*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i');
+
+#header {
+  background: #322C2B;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 86px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#header.fixed-top {
+  height: 60px;
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  font-family: "Poppins", sans-serif;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+#header .email {
+  display: flex;
+  align-items: center;
+  color: white; /* Ubah warna sesuai kebutuhan */
+}
+
+#header .email a {
+  margin-left: 10px; /* Sesuaikan jarak antara ikon email dan teks email */
+  color: white; /* Mengubah warna teks email menjadi putih */
+  text-decoration: none; /* Menghapus dekorasi link */
+}
+
+#header .email a:hover {
+  text-decoration: underline; /* Menambah garis bawah saat hover */
+}
+
+.scrolled-offset {
+  margin-top: 70px;
+}
+
+
+/* Menambahkan Background*/
+body{
+  background-image: url('../img/cool-background.png');
+  background-size: cover;
+  background-position: center;
+}
+/* Mengatur seluruh font menjadi Lato Regular */
+body, input, select, option, label, button {
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  text-align: center;
+}

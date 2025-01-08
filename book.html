@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Kamar</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/book.css">
+    <link href="assets/img/logo-jh.png" rel="icon">
+    <link href="assets/img/logo-jh.png" rel="apple-touch-icon">
+</head>
+<body>
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="index.html" class="logo"><img src="assets/img/logo-jh.png" alt=""></a>
+            <div class="email">
+                
+                <i class="bi bi-envelope"></i>
+                <a href="mailto:info@javaheritagehotel.com">info@javaheritagehotel.com</a>
+            </div>
+        </div>
+    </header>
+    
+<br><h2 class="text-center">Form Pemesanan Kamar</h2><br>
+<div class="container">
+    <form id="bookingForm" action="book.php" method="post">
+        <div class="form-group row">
+            <label for="namaPemesan" class="col-md-2 col-form-label">Nama Pemesan</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="namaPemesan" placeholder="Enter name" name="namaPemesan">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-md-2 col-form-label">Jenis Kelamin</label>
+            <div class="col-md-10">
+                <input type="radio" id="laki" name="jenisKelamin" value="Laki-Laki">
+                <label for="laki">Laki-Laki</label>
+                <input type="radio" id="perempuan" name="jenisKelamin" value="Perempuan">   
+                <label for="perempuan">Perempuan</label><br>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="nomorIdentitas" class="col-md-2 col-form-label">Nomor Identitas</label>
+            <div class="col-md-10">
+                <input type="number" class="form-control" id="nomorIdentitas" placeholder="Enter 16 digit number"
+                       name="nomorIdentitas">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="tipeKamar" class="col-md-2 col-form-label">Tipe Kamar</label>
+            <div class="col-md-10">
+                <select class="form-control" id="tipeKamar" name="tipeKamar">
+                    <option value="" selected disabled>Pilih Kamar Anda</option>
+                    <option value="junior">Junior</option>
+                    <option value="premium">Premium</option>
+                    <option value="executive">Executive</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="tanggalPesan" class="col-md-2 col-form-label">Tanggal Pesan</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="tanggalPesan" name="tanggalPesan" placeholder="DD/MM/YYYY">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="durasiMenginap" class="col-md-2 col-form-label">Durasi Menginap</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="durasiMenginap" placeholder="Enter number of days"
+                       name="durasiMenginap">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="breakfast" class="col-md-2 col-form-label">Termasuk Breakfast</label>
+            <div class="col-md-10">
+                <input type="checkbox" id="breakfast" name="breakfast">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="totalBayar" class="col-md-2 col-form-label">Total Bayar</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="totalBayar" readonly name="totalBayar">
+            </div>
+        </div>
+        <div class="form-button d-flex justify-content-center">
+            <a href="index.html" class="btn btn-secondary mr-3"><i class="fas fa-arrow-left"></i> Kembali</a>
+
+            <button type="button" class="btn btn-primary mr-3" id="hitungTotal">Hitung Total bayar</button>
+            <button type="submit" class="btn btn-success mr-3" id="simpan" name="simpan">Simpan</button>
+            <button type="button" class="btn btn-danger" id="batal" onclick="clearForm()">Batal</button>
+
+        </div>
+    </form>
+</div>
+<!-- Include Bootstrap JS --> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Custom JS -->
+<script src="assets/js/script.js"></script>
+</body>
+</html>
