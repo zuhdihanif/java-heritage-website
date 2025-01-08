@@ -1,4 +1,4 @@
-# brebes-explore
+# java-heritage-website
 
 ## Features
 * Hotel Preview: Provides an overview of the hotel's ambiance, facilities, and offerings.
